@@ -1,0 +1,27 @@
+<h1>Listing Users!</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Password</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.password %></td>
+          <td> <%= link_to "show", user_path(user) %> | <%= link_to "edit", edit_user_path(user) %> | <%= link_to "destroy", user_path(user), method: "delete" %> </td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+<%= link_to "New User", new_user_path %>
+
+
+<div id="footnotes_holder"></div>

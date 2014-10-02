@@ -1,0 +1,14 @@
+<h1>Show User</h1>
+
+<p>First name: <%= @user.first_name %></p>
+<p>Last name: <%= @user.last_name %></p>
+<p>Email: <%= @user.email %></p>
+
+
+<%= link_to "<< Back", '/' %>
+ |
+<%= link_to "Edit User", edit_user_path %>
+ | 
+<%= link_to "Delete User", edit_user_path %>
+
+<div id="footnotes_holder"></div>
